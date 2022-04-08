@@ -1,0 +1,55 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// --- MEDIA QUERY MANAGER --- //
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == br1200 {
+        @media only screen and (max-width: 75em) {
+            @content;
+        } //1200px
+    }
+
+    @if $breakpoint == base {
+        @media only screen and (max-width: 71.25em) {
+            @content;
+        } //1140px
+    }
+
+    @if $breakpoint == br1060 {
+        @media only screen and (max-width: 66.25em) {
+            @content;
+        } //1060px
+    }
+
+    @if $breakpoint == br930 {
+        @media only screen and (max-width: 58.125em) {
+            @content;
+        } //930px
+    }
+
+    @if $breakpoint == br820 {
+        @media only screen and (max-width: 51.25em) {
+            @content;
+        } //820px
+    }
+
+    @if $breakpoint == br680 {
+        @media only screen and (max-width: 42.5em) {
+            @content;
+        } //680px
+    }
+}
+

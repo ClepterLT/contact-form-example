@@ -1,0 +1,31 @@
+body {
+  font-family: $font-poppins;
+  color: $c-white;
+  font-weight: $f-regular;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+@mixin txt-h1 {
+  font-family: $font-poppins;
+  font-weight: $f-semibold;
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+}
+.txt-h1 { @include txt-h1; }
+
+@mixin txt-body-medium {
+  font-family: $font-poppins;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.txt-body-medium { @include txt-body-medium; }
+
+@mixin txt-input-title {
+  font-family: $font-poppins;
+  color: $c-white;
+  font-weight: $f-semibold;
+  font-size: 1rem;
+  line-height: 2.4rem;
+}
+.txt-input-title { @include txt-input-title; }

@@ -67,8 +67,14 @@ ul {
   color: $c-white;
 }
 
+.centered {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 .row {
-  max-width: 135.2rem;
+  flex: 0 1 135.2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   margin-left: auto;

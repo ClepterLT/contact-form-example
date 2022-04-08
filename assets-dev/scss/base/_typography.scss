@@ -4,6 +4,7 @@ body {
   font-weight: $f-regular;
   font-size: 1.4rem;
   line-height: 2.4rem;
+  background-color: $c-black;
 }
 
 @mixin txt-h1 {
@@ -14,6 +15,14 @@ body {
 }
 .txt-h1 { @include txt-h1; }
 
+@mixin txt-body-regular {
+  font-family: $font-poppins;
+  font-weight: $f-regular;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+.txt-body-regular { @include txt-body-regular; }
+
 @mixin txt-body-medium {
   font-family: $font-poppins;
   font-size: 1.6rem;
@@ -21,11 +30,11 @@ body {
 }
 .txt-body-medium { @include txt-body-medium; }
 
-@mixin txt-input-title {
+@mixin txt-input-label {
   font-family: $font-poppins;
   color: $c-white;
   font-weight: $f-semibold;
   font-size: 1rem;
   line-height: 2.4rem;
 }
-.txt-input-title { @include txt-input-title; }
+.txt-input-label { @include txt-input-label; }

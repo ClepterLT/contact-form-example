@@ -1,0 +1,27 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    @include txt-input-label;
+  }
+
+  &__input {
+    background-color: $c-dark-green;
+    border-radius: 7px;
+    @include txt-body-regular;
+    color: $c-light-green;
+    padding-left: 2rem;
+    padding-top: 1.2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.2rem;
+    border: 0;
+    margin-bottom: 3.2rem;
+
+    &:focus {
+      outline: none;
+      border: 0;
+      color: $c-white;
+    }
+  }
+}

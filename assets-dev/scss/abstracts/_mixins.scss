@@ -22,7 +22,7 @@
         } //1200px
     }
 
-    @if $breakpoint == base {
+    @if $breakpoint == br1140 {
         @media only screen and (max-width: 71.25em) {
             @content;
         } //1140px

@@ -9,17 +9,66 @@
   display: flex;
   column-gap: 4rem;
 
+  @include respond(br930) {
+    flex-direction: column;
+    max-height: none;
+    padding-left: 3.2rem;
+    padding-top: 15.2rem;
+    padding-right: 3.2rem;
+    padding-bottom: 10.4rem;
+  }
+
+  @include respond(br680) {
+    border-radius: 0;
+    padding-left: 2.4rem;
+    padding-top: 10.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 6.4rem;
+  }
+
   &__left {
     flex: 1;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include respond(br930) {
+      min-height: 18.4rem;
+      margin-bottom: 6.4rem;
+    }
+
+    @include respond(br930) {
+      min-height: 13.6rem;
+      margin-bottom: 4.6rem;
+    }
   }
 
   &__contact-wrap:first-child {
     margin-bottom: 3.2rem;
+
+    @include respond(br930) {
+      margin-bottom: 0;
+    }
   }
 
   &__right {
     flex: 0 0 53.5rem;
+
+    @include respond(br1140) {
+      flex: 0 1 45rem;
+    }
+  }
+
+  &__bottom {
+    @include respond(br930) {
+      display: flex;
+      column-gap: 2rem;
+    }
+  }
+
+  &__contact-wrap {
+    @include respond(br930) {
+      flex: 0 0 50%;
+    }
   }
 }

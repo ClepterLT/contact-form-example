@@ -5,21 +5,10 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
-
-  @include respond(tab-land) {
-    font-size: 56.25%; // 1rem = 9px
-  }
-
-  @include respond(tab-port) {
-    font-size: 50%; // 1rem = 8px
-  }
-
-  @include respond(big-desktop) {
-    font-size: 75%; // 1rem = 12px
-  }
 }
 
 button {
@@ -71,6 +60,19 @@ ul {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding-top: 14.4rem;
+  padding-bottom: 14.4rem;
+
+  @include respond(br930) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @include respond(br680) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .row {
@@ -79,4 +81,9 @@ ul {
   padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
+
+  @include respond(br680) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

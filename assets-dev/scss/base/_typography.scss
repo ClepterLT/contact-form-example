@@ -12,6 +12,11 @@ body {
   font-weight: $f-semibold;
   font-size: 5.6rem;
   line-height: 6.4rem;
+
+  @include respond(br680) {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  } 
 }
 .txt-h1 { @include txt-h1; }
 
@@ -27,6 +32,11 @@ body {
   font-family: $font-poppins;
   font-size: 1.6rem;
   line-height: 2.8rem;
+
+  @include respond(br680) {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  } 
 }
 .txt-body-medium { @include txt-body-medium; }
 
@@ -38,3 +48,9 @@ body {
   line-height: 2.4rem;
 }
 .txt-input-label { @include txt-input-label; }
+
+.link {
+  @include txt-body-regular;
+  font-weight: $f-semibold;
+  text-decoration: underline;
+}

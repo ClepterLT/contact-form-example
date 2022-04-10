@@ -1,0 +1,46 @@
+.checkbox {
+  display: flex;
+  column-gap: 1.2rem;
+  align-items: flex-start;
+
+  &__box {
+    margin-top: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 3px;
+    display: inline-block;
+    background-color: $c-dark-green;
+    outline: 0px solid #03C194;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      outline: 3px solid #03C194;
+    }
+  
+    &:checked {
+      background-color: $c-dark-green;
+  
+      &:after {
+        content: url(../../images/icon-tick.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        background-color: $c-dark-green;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+  
+}

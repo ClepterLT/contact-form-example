@@ -33,6 +33,17 @@ get_header(); ?>
                         <label for="contacts" class="input__label">Phone or Email Address <span class="input__required">*</span></label>
                         <input type="text" name="contacts" id="contacts" class="input__input" placeholder="Your Contacts">
                     </div>
+                    <div class="input">
+                        <label for="message" class="input__label">Your Message <span class="input__required">*</span></label>
+                        <textarea type="text" name="message" id="message" class="input__input input__input--textarea" placeholder="I Have This Project..."></textarea>
+                    </div>
+                    <div class="contact-form__bottom">
+                        <div class="checkbox">
+                            <input type="checkbox" name="privacy-policy" id="privacy-policy" class="checkbox__box">
+                            <label for="privacy-policy" class="checkbox__label">I consent with the personal data processing policy as it is described in the <a href="<?= get_privacy_policy_url(); ?>" class="link" target="_blank">Privacy Policy</a>.</label>
+                        </div>
+                        <button class="button">Send Message</button>
+                    </div>
                 </form>
             </div>
         </div>

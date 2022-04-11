@@ -17,7 +17,6 @@
 coverage
 node_modules
 bower_components
-assets
 npm-debug.log
 storage.json
 storage-bckp.json

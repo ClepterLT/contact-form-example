@@ -1,8 +1,8 @@
-import FormValidation from "./form-validation.class";
+import ContactForm from "./contact-form.class";
 
 document.addEventListener("DOMContentLoaded", function(){
   try {
-    const formValidator = new FormValidation();
+    const formValidator = new ContactForm();
     const formBtn = document.querySelector('[data-validate="validate"]');
     
     formBtn.addEventListener('click', formValidator.handleChange);

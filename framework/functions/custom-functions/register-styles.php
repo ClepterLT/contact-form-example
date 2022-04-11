@@ -2,25 +2,15 @@
 // REGISTER STYLES
 function hd_register_style() {
   if(!is_admin()):
-    wp_register_style( 'vendor-css', get_template_directory_uri() . '/assets/css/vendor.css', false, '2.8.7' );
     wp_register_style( 'app-css', get_template_directory_uri() . '/assets/css/app.css', false, '2.8.7' );
 
-//    wp_register_style( 'amcharts', 'https://www.amcharts.com/lib/3/plugins/export/export.css', false, '2.8.7' );
-
-    wp_enqueue_style( 'vendor-css' );
     wp_enqueue_style( 'app-css' );
-
-//    if(get_the_ID() == 492) {
-//        wp_enqueue_script('amcharts');
-//    }
   endif;
 }
 function hd_register_admin_style() {
 	wp_register_style( 'admin-custom-css', get_template_directory_uri() . '/assets/css/admin-custom.css', false, '2.8.7' );
-    wp_register_style( 'vendor-css', get_template_directory_uri() . '/assets/css/vendor.css', false, '2.8.7' );
     wp_register_style( 'app-css', get_template_directory_uri() . '/assets/css/app-gutenberg.css', false, '2.8.7' );
     wp_enqueue_style( 'admin-custom-css' );
-    wp_enqueue_style( 'vendor-css' );
     wp_enqueue_style( 'app-css' );
 
 }

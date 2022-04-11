@@ -1,6 +1,7 @@
 import { create, test, enforce, optional } from 'vest';
+import { postFormData } from './contact-form.api';
 
-export default class FormValidation {
+export default class ContactForm {
   constructor() {
     this.formValues = {};
   }
@@ -31,16 +32,16 @@ handleResult = (result) => {
 
 				const messageBlank = result.getErrors(input.name);
 				const parent = input.parentElement;
-				const inputMessage = parent.querySelector(".input__message");
+				const inputError = parent.querySelector(".input__error");
+				const inputMessage = `<span class="input__error-icon"></span><span class="input__message">${messageBlank[0]}</span>`;
+				const inputExclamation = `<span class="input__error-exclamation"></span>`;
 
 				if(messageBlank.length > 0) {
-					input.classList.remove("form-element--success");
-					input.classList.add("form-element--empty");
-					inputMessage.innerText = messageBlank[0];
+					input.type !== 'checkbox' ? parent.insertAdjacentHTML('beforeend', inputExclamation) : '';
+					parent.querySelector('.input__message') ? '' : inputError.insertAdjacentHTML('beforeend', inputMessage);
 				} else if(messageBlank.length === 0) {
-					input.classList.add("form-element--success");
-					input.classList.remove("form-element--empty");
-					inputMessage.innerText = '';
+					inputError.innerHTML = '';
+					parent.querySelector('.input__error-exclamation')?.remove();
 				}
 				
 		});
@@ -63,8 +64,13 @@ handleChange = (e) => {
 	let res = this.validationContact(this.formValues, name).done(this.handleResult);
 
 	if(!res.hasErrors()) {
-		formBtn.removeEventListener('click', handleChange);
-		formBtn.click();
+		formBtn.removeEventListener('click', this.handleChange);
+
+		postFormData(this.formValues)
+		.then(res => {
+			form.style = 'display:none;';
+			document.querySelector('.success').style = 'display:flex;';
+		})
 	}
 		
 }

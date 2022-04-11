@@ -28,27 +28,33 @@ get_header(); ?>
                     <div class="input">
                         <label for="fullName" class="input__label">Full Name <span class="input__required">*</span></label>
                         <input type="text" name="fullName" id="fullName" class="input__input" placeholder="Your Full Name" data-validate="validation-required">
-                        <span class="input__message"></span>
+                        <span class="input__error"></span>
                     </div>
                     <div class="input">
                         <label for="contacts" class="input__label">Phone or Email Address <span class="input__required">*</span></label>
                         <input type="text" name="contacts" id="contacts" class="input__input" placeholder="Your Contacts" data-validate="validation-required">
-                        <span class="input__message"></span>
+                        <span class="input__error"></span>
                     </div>
                     <div class="input">
                         <label for="message" class="input__label">Your Message <span class="input__required">*</span></label>
                         <textarea type="text" name="message" id="message" class="input__input input__input--textarea" placeholder="I Have This Project..." data-validate="validation-required"></textarea>
-                        <span class="input__message"></span>
+                        <span class="input__error"></span>
                     </div>
                     <div class="contact-form__bottom">
                         <div class="checkbox">
                             <input type="checkbox" name="privacyPolicy" id="privacyPolicy" class="checkbox__box" data-validate="validation-required">
                             <label for="privacyPolicy" class="checkbox__label">I consent with the personal data processing policy as it is described in the <a href="<?= get_privacy_policy_url(); ?>" class="link" target="_blank">Privacy Policy</a>.</label>
-                            <span class="input__message"></span>
+                            <span class="input__error"></span>
                         </div>
-                        <button class="button" data-validate="validate">Send Message</button>
+                        <button class="button button--black" data-validate="validate">Send Message</button>
                     </div>
                 </form>
+                <div class="success">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/icon-success.svg" alt="" class="success__icon">
+                    <h2 class="success__title">All done!</h2>
+                    <p class="success__text">Thanks for applying! We will get in touch with you very very soon.</p>
+                    <button class="button button--green" data-validate="validate">Go to Homepage</button>
+                </div>
             </div>
         </div>
     </div>

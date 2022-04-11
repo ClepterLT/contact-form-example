@@ -3,7 +3,6 @@
 function hd_register_scripts()
 {
     // HEADER
-    // wp_register_script( 'header-js', get_template_directory_uri() . '/assets/js/header.js', array( 'jquery' ) );
     global $wp_query;
 
     // FOOTER

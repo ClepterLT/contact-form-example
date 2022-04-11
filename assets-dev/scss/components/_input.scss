@@ -1,6 +1,15 @@
 .input {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3.2rem;
+
+  &:last-child {
+    margin-bottom: 4.8rem;
+  }
+
+  @include respond(br930) {
+    margin-bottom: 2.4rem;
+  }
 
   &__label {
     @include txt-input-label;
@@ -16,11 +25,6 @@
     padding-right: 2rem;
     padding-bottom: 1.2rem;
     border: 0;
-    margin-bottom: 3.2rem;
-
-    @include respond(br930) {
-      margin-bottom: 2.4rem;
-    }
 
     &:focus {
       outline: none;
@@ -30,7 +34,10 @@
 
     &--textarea {
       min-height: 16.7rem;
-      margin-bottom: 4.8rem;
     }
+  }
+
+  &__message {
+    @include txt-input-label;
   }
 }

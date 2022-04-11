@@ -1,4 +1,1 @@
-(function($) {
-    $(document).ready(function() {
-    })
-})(jQuery);
+import "./form-validation/form-validation.controller";

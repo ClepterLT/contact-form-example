@@ -56,6 +56,20 @@ ul {
   color: $c-white;
 }
 
+::placeholder {
+  color: $c-light-green;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $c-light-green;
+}
+
+::-ms-input-placeholder {
+  color: $c-light-green;
+}
+
+
 .centered {
   min-height: 100vh;
   display: flex;

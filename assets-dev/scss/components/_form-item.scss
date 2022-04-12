@@ -1,4 +1,4 @@
-.input {
+.form-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 3.2rem;
@@ -16,7 +16,8 @@
     @include txt-input-label;
   }
 
-  &__input {
+  &__input,
+  &__textarea {
     background-color: $c-dark-green;
     border-radius: 7px;
     @include txt-body-regular;
@@ -33,9 +34,10 @@
       color: $c-white;
     }
 
+
   }
 
-  &--textarea {
+  &__textarea {
     min-height: 16.7rem;
   }
 

@@ -1,1 +1,1 @@
-import "./contact-form/contact-form.controller";
+import "./forms/forms.controller";
